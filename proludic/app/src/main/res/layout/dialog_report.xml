@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/standard_dialog_background"
+    android:layout_height="match_parent">
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:text="@string/report_user"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/radioReport"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radioProfanity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="@color/colorPrimary"
+            android:text="@string/offensive_language"/>
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radioSpam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="@color/colorPrimary"
+            android:text="@string/spam_or_advertising" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radioOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="@color/colorPrimary"
+            android:text="@string/other" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/other_et"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/white"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:background="@drawable/btn_background"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/report_button"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:background="@drawable/btn_background"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

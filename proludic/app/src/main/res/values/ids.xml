@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+    <item type="id" name="dashboard_timer_settings_button"/>
+    <item type="id" name="add_event_tmp_edit"/>
+    <item type="id" name="location_search"/>
+    <item name="successchallengerequest" type="id">"You have successfully sent a challenge request
+        to
+    </item>
+</resources>

@@ -1,0 +1,113 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:seekBarStyle">@style/SeekBarAppTheme</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name ="android:windowActionBar">false</item>
+        <item name ="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="displayOptions">showHome|useLogo</item>
+    </style>
+
+    <!--<style name="customAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">-->
+        <!--<item name="android:textColorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="colorAccent">@color/colorPrimary</item>-->
+        <!--<item name="android:headerBackground">@color/colorPrimary</item>-->
+        <!--<item name="android:textColorHighlight">@color/colorPrimary</item>-->
+        <!--<item name="android:windowTitleStyle">@style/customAlertDialogTitle</item>-->
+        <!--<item name="android:textAppearanceMedium">@style/customAlertDialogText</item>-->
+    <!--</style>-->
+
+    <!--<style name="customAlertDialogTitle">-->
+        <!--<item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>-->
+        <!--<item name="android:textSize">14sp</item>-->
+    <!--</style>-->
+
+    <!--<style name="customAlertDialogText">-->
+        <!--<item name="android:textSize">10sp</item>-->
+    <!--</style>-->
+
+    <style name="customAlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/colorSecondary</item>
+        <item name="android:headerBackground">@color/white</item>
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="buttonBarPositiveButtonStyle">@style/positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/positive</item>
+        <item name="android:windowTitleStyle">@style/customAlertDialogTitle</item>
+        <item name="android:textAppearanceMedium">@style/customAlertDialogText</item>
+    </style>
+
+    <style name="customAlertDialogTitle" parent="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="customAlertDialogText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="SeekBarAppTheme" parent="android:Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/apptheme_scrubber_progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/apptheme_scrubber_progress_horizontal_holo_light</item>
+        <item name="android:minHeight">13dip</item>
+        <item name="android:maxHeight">13dip</item>
+        <item name="android:thumb">@drawable/apptheme_scrubber_control_selector_holo_light</item>
+        <item name="android:thumbOffset">16dip</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+    </style>
+
+    <style name="positive" parent="Base.Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="App_EditTextStyle" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+</resources>

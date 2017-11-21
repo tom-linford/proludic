@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_layout_root"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_marginBottom="@dimen/toast_margin_bottom"
+    android:background="@drawable/custom_toast_background" >
+
+    <TextView android:id="@+id/toastMessage"
+        android:layout_width="match_parent"
+        android:minWidth="@dimen/toast_min_width"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent" />
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ViewAnimator
+        android:id="@+id/extended_registration_va"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:layout_gravity="bottom"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:background="@drawable/small_button_background"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_back"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <RadioGroup
+            android:id="@+id/bottom_rg"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:enabled="false"
+                app:buttonTint="@color/colorPrimary"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:enabled="false"
+                app:buttonTint="@color/colorPrimary"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:enabled="false"
+                app:buttonTint="@color/colorPrimary"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:enabled="false"
+                app:buttonTint="@color/colorPrimary"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:enabled="false"
+                app:buttonTint="@color/colorPrimary"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:enabled="false"
+                app:buttonTint="@color/colorPrimary"
+                android:layout_height="match_parent" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:background="@drawable/small_button_background"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_forward"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

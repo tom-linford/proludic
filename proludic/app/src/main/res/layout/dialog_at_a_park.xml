@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/colorSecondary"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/at_a_park_dialog_container"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <View
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/questionmark"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:id="@+id/at_a_park_dialog_description"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_marginStart="2.5dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/at_a_park_dialog_no"
+            android:text="@string/no"
+            android:paddingTop="7.5dp"
+            android:paddingBottom="7.5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="75dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/at_a_park_dialog_yes"
+            android:text="@string/yes"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/colorPrimary"
+            android:layout_width="75dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_park_selection_container"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <icn.proludic.widgets.CustomTextView
+            android:id="@+id/select_home_park_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/select_home_park"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/select_home_park_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

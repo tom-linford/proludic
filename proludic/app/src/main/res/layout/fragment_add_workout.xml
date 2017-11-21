@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+    <icn.proludic.widgets.CustomTextView
+        android:id="@+id/heading"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_workout"/>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:id="@+id/info"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_below="@id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_exercises_to_add"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/info"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/exercises_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/finish"/>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:id="@id/finish"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/btn_background"
+        android:text="@string/finish_caps"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</RelativeLayout>

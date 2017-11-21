@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <icn.proludic.widgets.CustomTextView
+        android:text="@string/upload_image"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="1" android:gravity="center" android:layout_width="match_parent"
+        android:background="@color/colorPrimaryHalf"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/button_gallery"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:scaleType="fitCenter"
+            android:padding="35dp"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_gallery"/>
+
+        <ImageButton
+            android:id="@+id/button_take_photo"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:scaleType="fitCenter"
+            android:padding="35dp"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_photo" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/profile_image_preview"
+        android:background="@drawable/image_view_background"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:id="@+id/save_image_button"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/btn_background"
+        android:text="@string/save_image"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>

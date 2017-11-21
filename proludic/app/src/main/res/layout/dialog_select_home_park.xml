@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorSecondary"
+    android:padding="15dp">
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/select_home_park_from_list"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"/>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="@string/can_be_changed_later"
+        android:layout_marginBottom="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/select_home_park_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

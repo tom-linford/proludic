@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/icon_e_reg"
+        android:layout_width="50dp"
+        android:src="@drawable/ic_terms"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp" />
+
+    <icn.proludic.widgets.CustomTextView
+        android:text="@string/hint_terms_and_conditions"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content" />
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:text="@string/reg_terms_and_conditions"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content" />
+
+    <ScrollView android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:id="@+id/terms_container"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        android:layout_gravity="center_vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:text="@string/drugs_t_and_c"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content" />
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:text="@string/pregnancy_t_and_c"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:text="@string/doctor_t_and_c"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content" />
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:text="@string/injury_t_and_c"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content" />
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:text="@string/stretch_t_and_c"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content" />
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:text="@string/forum_t_and_c"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <icn.proludic.widgets.CustomCheckbox
+        android:id="@+id/accept_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/i_agree_to_the_terms_and_conditions"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

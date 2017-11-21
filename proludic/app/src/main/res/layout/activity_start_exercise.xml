@@ -1,0 +1,324 @@
+<android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <icn.proludic.widgets.CustomTextView
+            android:id="@+id/start_exercise_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/top_level_container"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/start_exercise_title"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <icn.proludic.widgets.CustomTextView
+                    android:id="@+id/single_exercise_reps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 x 0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:gravity="center"
+                    android:text="@string/sets_reps" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <icn.proludic.widgets.CustomTextView
+                    android:id="@+id/single_exercise_rest_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:gravity="center"
+                    android:text="@string/rest_time" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/no_weight_description"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/top_level_container"
+            android:background="@color/white"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/bottom_level_container"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/top_level_container"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <icn.proludic.widgets.CustomTextView
+                    android:id="@+id/single_exercise_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:gravity="center"
+                    android:text="@string/avg_time_per_set" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <icn.proludic.widgets.CustomTextView
+                    android:id="@+id/single_exercise_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 - 0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:gravity="center"
+                    android:text="@string/weights" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottom_level_container"
+            android:id="@+id/exercise_time_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/xxxhd_clock"/>
+
+            <icn.proludic.widgets.CustomAlarmClockTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/start_exercise_time"
+                android:padding="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="#cc0000"
+                android:textSize="48sp"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/img_muscle_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/exercise_time_container"
+            android:layout_above="@+id/tv_recommended_time"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:adjustViewBounds="true" />
+
+        <RelativeLayout
+            android:id="@+id/finish_exercise_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <!--<icn.proludic.widgets.CustomTextView
+                android:id="@+id/finish_exercise_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_clock"
+                android:gravity="center_horizontal"
+                android:text="00:00"
+                android:textColor="@color/black"
+                android:textSize="24sp" />-->
+
+            <icn.proludic.widgets.CustomTextView
+                android:id="@+id/finish_exercise_hearts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_heart"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/workout_complete_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/finish_exercise_hearts"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12.5dp">
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/workout_complete"
+                    android:textColor="@color/black" />
+
+                <icn.proludic.widgets.CustomTextView
+                    android:id="@+id/workout_complete_hearts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_heart"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:id="@+id/dont_award_hearts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/workout_complete_container"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/completed_exercise_too_quickly"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@id/tv_recommended_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/total_time"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/reccomended_time"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <icn.proludic.widgets.CustomTextView
+            android:id="@id/total_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tap_to_start"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:visibility="visible" />
+
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@id/tap_to_start"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/taptostart"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/browse_top_nav_container"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+
+            <icn.proludic.widgets.CustomBebasNeueTextView
+                android:id="@+id/tv_local"
+                android:layout_width="0dp"
+                android:layout_weight="0.33"
+                android:text="@string/local"
+                android:textColor="@color/colorSecondary"
+                android:gravity="center"
+                android:layout_height="50dp" />
+
+            <icn.proludic.widgets.CustomBebasNeueTextView
+                android:id="@+id/tv_national"
+                android:layout_width="0dp"
+                android:layout_weight="0.33"
+                android:text="@string/national"
+                android:textColor="@color/colorSecondary"
+                android:gravity="center"
+                android:layout_height="50dp" />
+
+            <icn.proludic.widgets.CustomBebasNeueTextView
+                android:id="@+id/tv_forum"
+                android:layout_width="0dp"
+                android:layout_weight="0.33"
+                android:text="@string/forum"
+                android:textColor="@color/colorSecondary"
+                android:gravity="center"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <icn.proludic.widgets.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/hearts_leaderboard"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/unselectedGrey"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.25"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/rank"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/name"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.3"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/total"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/hearts_leaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white" />
+
+            <icn.proludic.widgets.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/achievements_leaderboard"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/unselectedGrey"
+                android:orientation="horizontal"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.25"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/rank"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/name"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.3"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/achievements"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/achievement_leaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="25dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

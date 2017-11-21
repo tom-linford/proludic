@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/caution_dialog_bg"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"
+        android:text="@string/caution"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:id="@+id/warning_message"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:fontFamily=""
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"/>
+
+    <icn.proludic.widgets.CustomCheckbox
+        android:id="@+id/do_not_warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/do_not_ask_again"
+        android:layout_marginBottom="5dp"
+        android:textColor="@android:color/white"/>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:id="@+id/btn_continue"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/btn_background"
+        android:text="@string/continue_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
+</LinearLayout>

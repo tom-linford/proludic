@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exercises_view_animator_child_one"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/exercises_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <ImageView
+            android:id="@+id/exercises_image"
+            android:background="@drawable/btn_exercises"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <icn.proludic.widgets.CustomTextView
+            android:id="@+id/exercises_title"
+            android:gravity="center"
+            android:text="@string/exercises"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/workouts_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:id="@+id/workouts_image"
+                android:background="@drawable/btn_routines"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <icn.proludic.widgets.CustomTextView
+                android:id="@+id/workouts_title"
+                android:gravity="center"
+                android:text="@string/workouts"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/create_routine"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#AAD46B0D"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:padding="3dp"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrows"/>
+
+        <icn.proludic.widgets.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Add New Workout"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

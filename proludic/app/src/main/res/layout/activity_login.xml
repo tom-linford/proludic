@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/activity_login_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:adjustViewBounds="true"
+        android:layout_marginLeft="@dimen/login_logo_margin"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:layout_marginStart="@dimen/login_logo_margin"
+        android:layout_marginRight="@dimen/login_logo_margin"
+        android:layout_marginEnd="@dimen/login_logo_margin"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/login_logo_margin" />
+
+    <icn.proludic.widgets.CustomViewAnimator
+        android:id="@+id/activity_login_view_animator"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@id/activity_login_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/login_va_margin"
+        android:layout_marginStart="@dimen/login_va_margin"
+        android:layout_marginRight="@dimen/login_va_margin"
+        android:layout_marginEnd="@dimen/login_va_margin"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:id="@+id/activity_login_va_child_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/activity_login_email_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_login_email"
+                android:layout_marginTop="@dimen/login_button_margin"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:id="@+id/activity_login_facebook_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_facebook"
+                android:layout_marginTop="@dimen/login_button_margin"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:id="@+id/activity_login_register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_login_register"
+                android:layout_marginTop="@dimen/login_button_margin"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_login_va_child_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/login_email_username"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/login_input_username"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/hint_username"
+                    android:inputType="text"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/login_email_password"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/login_input_password"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/black"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+            <ImageButton
+                android:id="@+id/activity_login_email_button_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_login_email"
+                android:layout_marginTop="@dimen/login_button_margin"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/activity_login_email_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/activity_login_text_margin_top"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/activity_login_text_text_size"
+                android:text="@string/forgot_password"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_login_va_child_three"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/register_email_name"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/register_input_name"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionDone"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_name"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/register_email_username"
+                android:layout_width="match_parent"
+                android:layout_below="@id/register_email_name"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/register_input_username"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/hint_username"
+                    android:inputType="text"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/register_email_email"
+                android:layout_width="match_parent"
+                android:layout_below="@id/register_email_username"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/register_input_email"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/register_email_confirm_email"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/register_email_email"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/register_input_confirm_email"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/hint_confirm_email"
+                    android:inputType="textEmailAddress"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/register_email_password"
+                android:layout_width="match_parent"
+                android:layout_below="@id/register_email_confirm_email"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/register_input_password"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/black"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+            <icn.proludic.widgets.CustomTextInputLayout
+                android:id="@+id/register_email_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_below="@id/register_email_password"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextInputEditText
+                    android:id="@+id/register_input_confirm_password"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/hint_confirm_password"
+                    android:inputType="textPassword"/>
+
+            </icn.proludic.widgets.CustomTextInputLayout>
+
+            <ImageButton
+                android:id="@+id/activity_register_email_button_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_email_confirm_password"
+                android:src="@drawable/btn_login_register"
+                android:layout_marginTop="@dimen/login_button_margin"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+    </icn.proludic.widgets.CustomViewAnimator>
+
+</RelativeLayout>

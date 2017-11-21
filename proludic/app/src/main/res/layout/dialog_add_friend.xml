@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <icn.proludic.widgets.CustomFontEditText
+        android:id="@+id/enter_friends_username"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="@color/black"
+        android:hint="Enter Friend's Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:layout_marginTop="2.5dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:layout_marginStart="20dp"
+        android:text="@string/case_sensitive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:id="@+id/add_friend_button"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/btn_background"
+        android:text="@string/add_friend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>

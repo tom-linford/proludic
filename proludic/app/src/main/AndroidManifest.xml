@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="icn.proludic">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <permission
+        android:name="com.example.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE"/>
+    <!--<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <permission
+        android:name="icn.proludic.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="icn.proludic.permission.C2D_MESSAGE" />-->
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="icn.proludic.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <!--<service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name=".misc.CustomPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="icn.proludic" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.parse.push.gcm_sender_id"
+            android:value="1019532414928"/>-->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBHgtssEzYX4sUspvDlDGlPxjZEBZPYqWQ"/>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            tools:replace="android:theme"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateUnspecified|adjustUnspecified"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateUnspecified|adjustUnspecified"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https://fb.me/1827258114270343" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".DashboardActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".StartedExerciseActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".StartedWorkoutActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".ActivitySettings"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".DashboardActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+
+        </activity>
+        <activity android:name=".CommunityActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CommunityRepliesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MapsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityExtendedRegistration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+</manifest>

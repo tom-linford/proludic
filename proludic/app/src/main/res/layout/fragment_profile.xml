@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/profile_container"
+            android:layout_width="match_parent"
+            android:background="#fab979"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/profile_details_container"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/profile_pic_container"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/profile_picture"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp" />
+
+                            <ImageView
+                                android:id="@+id/rank_icon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom|end" />
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/upload_photo_icon"
+                            android:layout_width="75dp"
+                            android:scaleType="centerInside"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_photo_camera_black_24dp"
+                            android:layout_height="75dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@id/profile_pic_container"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp">
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/user_full_name"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/user_name"
+                        android:textStyle="italic"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content" />
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/home_park"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content" />
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/user_hearts"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:drawableEnd="@drawable/ic_heart"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttons_container"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content">
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/edit_profile_button"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:background="@drawable/edit_btn_bg"
+                        android:text="@string/edit"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp" />
+
+                    <FrameLayout
+                        android:id="@+id/notifications_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:src="@drawable/notification"
+                            android:scaleType="fitStart"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"/>
+
+                        <TextView
+                            android:id="@+id/notification_badge"
+                            android:textColor="@color/white"
+                            android:text="0"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:padding="2dp"
+                            android:background="@drawable/badge_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_height="wrap_content" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:id="@+id/winsTV"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_below="@id/buttons_container"
+                    android:text="@string/win_draw_loss_zeros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <icn.proludic.widgets.CustomFontEditText
+                android:id="@+id/profile_description"
+                android:gravity="center"
+                android:background="@color/white"
+                android:enabled="false"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/description_char_length"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="bottom|end"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/save_description_button"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_background"
+            android:text="@string/save"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:id="@+id/friends_container"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryHalf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/add_friend_container"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/add_friend"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="50dp" />
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/add_friend"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invite_friends_container"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/btn_fb"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="50dp" />
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/invite"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:id="@+id/no_friends_tv"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:enabled="false"
+                    android:visibility="invisible"
+                    android:layout_margin="10dp"
+                    android:text="@string/no_friends_add_them"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/friends_activity_recycler_view"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:visibility="invisible"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/stats_parent_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <icn.proludic.widgets.CustomTextView
+                android:text="@string/your_stats"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/stats_recycler_view"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stats_container"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimaryHalf"
+                    android:visibility="gone"
+                    android:weightSum="1"
+                    android:layout_height="60dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <icn.proludic.widgets.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:text="0"
+                            android:id="@+id/number_of_exercises"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content" />
+
+                        <icn.proludic.widgets.CustomTrebucheTextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:drawableStart="@drawable/ic_weight"
+                            android:drawablePadding="3dp"
+                            android:text="@string/total_exercises"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <icn.proludic.widgets.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/number_of_hearts"
+                            android:textSize="18sp"
+                            android:text="0"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content" />
+
+                        <icn.proludic.widgets.CustomTrebucheTextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/ic_heart"
+                            android:drawablePadding="1dp"
+                            android:text="@string/total_hearts"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <icn.proludic.widgets.CustomTextView
+            android:id="@+id/achievements_title"
+            android:text="@string/your_achievements"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginBottom="25dp"
+            android:id="@+id/achievements_recycler_view"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

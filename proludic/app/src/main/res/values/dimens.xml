@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="login_va_margin">50dp</dimen>
+    <dimen name="login_button_margin">10dp</dimen>
+    <dimen name="login_logo_margin">20dp</dimen>
+    <dimen name="login_va_height">250dp</dimen>
+    <dimen name="activity_login_text_text_size">14sp</dimen>
+    <dimen name="activity_login_text_margin_top">2dp</dimen>
+    <dimen name="toast_min_width">200dp</dimen>
+    <dimen name="toast_margin_bottom">30dp</dimen>
+    <dimen name="dialog_margin">20dp</dimen>
+</resources>

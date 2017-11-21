@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'proludic_keystore'
+            keyPassword 'Taylor75'
+            storeFile file('/home/tom/Documents/Proludic/proludic/keystore/proludickeystore.jks')
+            storePassword 'Taylor75'
+        }
+    }
+
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "icn.proludic"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 26
+        versionName "1.012"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.parse.bolts:bolts-android:1.4.0'
+    compile 'com.parse:parse-android:1.15.8'
+    compile 'net.danlew:android.joda:2.9.5.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.19.0'
+    compile 'com.parse:parsefacebookutils-v4-android:1.10.3@aar'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.android.gms:play-services-maps:11.0.1'
+    compile 'com.google.android.gms:play-services-location:11.0.1'
+    compile 'com.flurry.android:analytics:6.4.2'
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'com.google.gms.google-services'

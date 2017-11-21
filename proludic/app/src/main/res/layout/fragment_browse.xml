@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/browse_top_nav_container"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+
+            <icn.proludic.widgets.CustomBebasNeueTextView
+                android:id="@+id/tv_browse_all"
+                android:layout_width="0dp"
+                android:layout_weight="0.33"
+                android:text="@string/browse_all"
+                android:textColor="@color/colorSecondary"
+                android:gravity="center"
+                android:layout_height="50dp" />
+
+            <icn.proludic.widgets.CustomBebasNeueTextView
+                android:id="@+id/tv_most_used"
+                android:layout_width="0dp"
+                android:layout_weight="0.33"
+                android:text="@string/used"
+                android:textColor="@color/colorSecondary"
+                android:gravity="center"
+                android:layout_height="50dp" />
+
+            <icn.proludic.widgets.CustomBebasNeueTextView
+                android:id="@+id/tv_my_favourites"
+                android:layout_width="0dp"
+                android:layout_weight="0.33"
+                android:text="@string/my_favourites"
+                android:textColor="@color/colorSecondary"
+                android:gravity="center"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/browse_et"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="2.5dp"
+            android:textColor="@color/colorPrimary"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColorHint="@color/colorPrimaryHalf"
+            android:drawablePadding="5dp"
+            android:background="@drawable/search_background"
+            android:layout_marginBottom="2.5dp"
+            android:drawableStart="@drawable/ic_search"
+            android:hint="@string/default_search_hint"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/browse_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:id="@+id/no_data_tv"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:id="@+id/no_park_tv"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/currently_no_park"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

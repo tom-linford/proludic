@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ScrollView android:layout_margin="25dp"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/different_equipment_question"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" />
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/different_equipment_answer"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/suitable_for_children_question"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" />
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/suitable_for_children_answer"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/find_out_more_question"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" />
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/find_out_more_answer"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/how_long_results_question"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" />
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:text="@string/how_long_results_answer"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

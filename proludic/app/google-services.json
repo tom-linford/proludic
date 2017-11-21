@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1019532414928",
+    "firebase_url": "https://proludic-1500980913613.firebaseio.com",
+    "project_id": "proludic-1500980913613",
+    "storage_bucket": "proludic-1500980913613.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019532414928:android:d238f5346950d6a6",
+        "android_client_info": {
+          "package_name": "icn.proludic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019532414928-pmjs03l4jaktv57roik48t3l7uqam9k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZf8dZg2aQFzp9Ftx4A1KhD8FyOFDDO2w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

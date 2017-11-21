@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/home_sv"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/profile_container"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryHalf"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/profile_pic_container"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/user_profile_picture"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp">
+
+                    <icn.proludic.widgets.CustomTextView
+                        android:id="@+id/user_full_name"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"/>
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/user_home_park"
+                        android:textStyle="italic"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content" />
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/user_hearts"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:drawableEnd="@drawable/ic_heart"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <icn.proludic.widgets.CustomTextView
+            android:text="@string/weekly_target_routine"
+            android:textSize="18sp"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+
+            <ImageView
+                android:id="@+id/home_target_routine"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <icn.proludic.widgets.CustomTextView
+                android:id="@+id/week_routine_title"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/hearts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_heart_white"
+                        android:layout_marginBottom="5dp"
+                        android:text="200"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:id="@+id/not_at_home_park"
+                    android:layout_marginTop="2.5dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:text="@string/unavailableathomepark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <icn.proludic.widgets.CustomTextView
+            android:id="@+id/friends_activity"
+            android:text="@string/friends_activity"
+            android:textSize="18sp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/friends_activity_recycler_view"
+                android:background="@color/colorPrimaryHalf"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:layout_height="160dp">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <icn.proludic.widgets.CustomTextView
+                    android:text="@string/top_rank"
+                    android:id="@+id/top_rank"
+                    android:textSize="18sp"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/top_rank_hearts_frame_layout"
+                    android:layout_gravity="center"
+                    android:layout_width="85dp"
+                    android:layout_below="@id/top_rank"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="85dp">
+
+                <ImageView
+                    android:id="@+id/top_rank_profile_picture"
+                    android:layout_width="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="75dp" />
+
+                    <TextView
+                        android:id="@+id/top_rank_hearts"
+                        android:layout_gravity="bottom|center"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/ic_heart"
+                        android:layout_height="wrap_content" />
+
+                </FrameLayout>
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:id="@+id/top_rank_username"
+                    android:textSize="15sp"
+                    android:layout_margin="5dp"
+                    android:layout_below="@id/top_rank_hearts_frame_layout"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <icn.proludic.widgets.CustomTextView
+                    android:id="@+id/top_achievers"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/top_achievers"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <FrameLayout
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/top_rank_park_frame_layout"
+                    android:layout_width="85dp"
+                    android:layout_below="@id/top_achievers"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/top_community_profile_picture"
+                        android:layout_width="75dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:layout_height="75dp" />
+
+                    <icn.proludic.widgets.CustomTrebucheTextView
+                        android:id="@+id/top_community_hearts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:background="@color/colorPrimary"
+                        android:drawableStart="@drawable/ic_weight"
+                        android:gravity="center"
+                        android:text="0" />
+
+                </FrameLayout>
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:id="@+id/top_community_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/top_rank_park_frame_layout"
+                    android:layout_margin="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:background="@color/black80"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:src="@drawable/pixels1"
+                android:rotation="270"
+                android:layout_gravity="bottom|end"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <ImageView
+                android:src="@drawable/pixels1"
+                android:rotation="90"
+                android:layout_gravity="top|start"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:text="@string/charitable_donations"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <icn.proludic.widgets.CustomTextView
+                    android:text="@string/coming_soon_ellipsis"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/nearest_park_button"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_background"
+            android:text="@string/findnearestpark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginBottom="15dp"
+            android:id="@+id/findnearestparkrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </ScrollView>

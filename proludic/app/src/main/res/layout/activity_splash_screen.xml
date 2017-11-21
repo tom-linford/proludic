@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <ViewAnimator
+        android:id="@+id/splash_view_animator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/splash_screen_image_child_one"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash_1"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/splash_screen_image_child_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash_2"/>
+
+    </ViewAnimator>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/splashborder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_gravity="top"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/splash_screen_update_dialog_background"
+        android:orientation="vertical">
+
+        <icn.proludic.widgets.CustomTextView
+            android:id="@+id/splash_screen_update_title"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/splash_screen_update_description"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:text="@string/please_wait_whilst_we_configure"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:layout_gravity="center_horizontal"
+            android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+
+</LinearLayout>
+
+    <ImageView
+        android:src="@drawable/pixels1"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="65dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"/>
+
+    <ImageView
+        android:src="@drawable/pixels1"
+        android:layout_marginStart="20dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="275dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp" />
+
+</FrameLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardBackgroundColor="?attr/customCardBackgroundColor"
+    card_view:cardElevation="5dp"
+    android:layout_marginBottom="2.5dp"
+    android:layout_marginTop="2.5dp"
+    android:clickable="true"
+    android:foreground="?android:selectableItemBackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingRight="24dp"
+        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:focusable="false"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:layout_gravity="bottom"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent">
+
+              <io.github.carlorodriguez.alarmon.Widgets.CustomAlarmClockTextView
+                  android:id="@+id/alarm_time"
+                  android:focusable="false"
+                  android:gravity="bottom|start"
+                  android:maxLines="1"
+                  android:textColor="@color/white"
+                  android:textSize="48sp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent" />
+
+              <TextView
+                  android:id="@+id/alarm_am_or_pm"
+                  android:layout_width="wrap_content"
+                  android:textSize="22sp"
+                  android:textColor="@color/white"
+                  android:maxLines="1"
+                  android:focusable="false"
+                  android:layout_height="fill_parent" />
+
+          </LinearLayout>
+
+          <TextView android:id="@+id/alarm_label"
+              android:focusable="false"
+              android:gravity="top|end"
+              android:textColor="@color/white"
+              android:maxLines="1"
+              android:textSize="20sp"
+              android:maxEms="6"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:focusable="false"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+
+          <TextView android:id="@+id/next_alarm"
+              android:focusable="false"
+              android:gravity="bottom|start"
+              android:textColor="@color/white"
+              android:maxLines="1"
+              android:layout_weight="1"
+              android:textStyle="italic"
+              android:layout_width="0dp"
+              android:layout_height="fill_parent" />
+
+      </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/alarm_enabled"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" />
+
+  </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/day0"
+                android:enabled="false"
+                android:textOff="@string/dow_sun_short"
+                android:textOn="@string/dow_sun_short"
+                style="@style/AlarmDayToggle"/>
+
+            <ToggleButton
+                android:id="@+id/day1"
+                android:enabled="false"
+                android:textOff="@string/dow_mon_short"
+                android:textOn="@string/dow_mon_short"
+                style="@style/AlarmDayToggle"/>
+
+            <ToggleButton
+                android:id="@+id/day2"
+                android:enabled="false"
+                android:textOff="@string/dow_tue_short"
+                android:textOn="@string/dow_tue_short"
+                style="@style/AlarmDayToggle"/>
+
+            <ToggleButton
+                android:id="@+id/day3"
+                android:enabled="false"
+                android:textOff="@string/dow_wed_short"
+                android:textOn="@string/dow_wed_short"
+                style="@style/AlarmDayToggle"/>
+
+            <ToggleButton
+                android:id="@+id/day4"
+                android:enabled="false"
+                android:textOff="@string/dow_thu_short"
+                android:textOn="@string/dow_thu_short"
+                style="@style/AlarmDayToggle"/>
+
+            <ToggleButton
+                android:id="@+id/day5"
+                android:enabled="false"
+                android:textOff="@string/dow_fri_short"
+                android:textOn="@string/dow_fri_short"
+                style="@style/AlarmDayToggle"/>
+
+            <ToggleButton
+                android:id="@+id/day6"
+                android:enabled="false"
+                android:textOff="@string/dow_sat_short"
+                android:textOn="@string/dow_sat_short"
+                style="@style/AlarmDayToggle"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

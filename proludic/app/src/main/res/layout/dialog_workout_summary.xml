@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/workout_name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"/>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/workout_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/workout_summary"
+        android:padding="3dp"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/workout_summary_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_taken"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"/>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/time_taken"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/achievements_earned"
+            android:textColor="@color/black"
+            android:layout_marginRight="5dp"
+            android:textSize="16sp"/>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/achievements_earned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="0"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hearts_earned"
+            android:textColor="@color/black"
+            android:layout_marginRight="5dp"
+            android:textSize="16sp"/>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/hearts_earned"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <icn.proludic.widgets.CustomTrebucheTextView
+        android:id="@+id/btn_continue"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/btn_background"
+        android:text="@string/continue_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
+</LinearLayout>

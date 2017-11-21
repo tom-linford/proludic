@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/dashboard_coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/contentFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/dashboard_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/content_activity_dashboard"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dashboard_fragment_container"
+                android:layout_width="match_parent"
+                android:focusableInTouchMode="true"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+            <include layout="@layout/dialog_at_a_park"/>
+        </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

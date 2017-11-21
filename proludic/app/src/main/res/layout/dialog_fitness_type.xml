@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/select_type_dialog"
+    android:layout_width="wrap_content"
+    android:layout_centerInParent="true"
+    android:visibility="visible"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:background="@color/colorSecondary">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/fitness_type_dialog">
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:id="@+id/btn_endurance"
+                android:background="@drawable/btn_endurance"/>
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:id="@+id/btn_fitness"
+                android:background="@drawable/btn_fitness"/>
+            <ImageView
+                android:id="@+id/btn_muscle"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:background="@drawable/btn_muscle" />
+        </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <icn.proludic.widgets.CustomTextView
+                android:id="@+id/single_workout_title"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_height="60dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <icn.proludic.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/single_workout_exercises_amount"
+                    android:textSize="18sp"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+
+                <icn.proludic.widgets.CustomTrebucheTextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:text="@string/exercises"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black80"/>
+
+        <icn.proludic.misc.SnappyRecyclerView
+            android:id="@+id/workouts_exercises_thumbnails"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            android:layout_height="200dp"/>
+
+        <icn.proludic.widgets.CustomTrebucheTextView
+            android:id="@+id/single_workout_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <icn.proludic.widgets.CustomTrebucheTextView
+                android:id="@+id/start_workout_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/start_workout"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_marginEnd="6dp"
+                android:id="@+id/view_brand_info"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|end|center_vertical"
+                android:src="@drawable/ic_info"/>
+
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
